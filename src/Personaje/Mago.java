@@ -13,6 +13,7 @@ public class Mago extends Personaje {
     // Métodos
     @Override
     public void atacar() {
-        System.out.println(nombre + " lanza hechizo");
+        System.out.println(getNombre() + " lanza hechizo");
+        System.out.println("Nivel: " + getNivel() + ", Vida: " + getPuntosVida());
     }
 }

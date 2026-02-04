@@ -13,6 +13,7 @@ public class Guerrero extends Personaje {
     // Métodos
     @Override
     public void atacar() {
-        System.out.println(nombre + " ataca con espada");
+        System.out.println(getNombre() + " ataca con espada");
+        System.out.println("Nivel: " + getNivel() + ", Vida: " + getPuntosVida());
     }
 }

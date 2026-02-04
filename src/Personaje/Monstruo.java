@@ -11,6 +11,7 @@ public class Monstruo extends Personaje {
     // Métodos
     @Override
     public void atacar() {
-        System.out.println(nombre + " ataca salvajemente");
+        System.out.println(getNombre() + " ataca salvajemente");
+        System.out.println("Nivel: " + getNivel() + ", Vida: " + getPuntosVida());
     }
 }
