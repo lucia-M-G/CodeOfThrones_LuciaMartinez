@@ -6,19 +6,23 @@ public abstract class Personaje {
     private int nivel;
     private int puntosVida;
     private boolean estaVivo;
+    private TipoDanio debilidad;
+    private TipoDanio resistencia;
 
     //Constructor
-    public Personaje(String nombreE, int nivelE, int puntosVidaE) {
+    public Personaje(String nombreE, int nivelE, int puntosVidaE, TipoDanio debilidadE, TipoDanio resistenciaE) {
         this.nombre = nombreE;
         setNivel(nivelE);
         setPuntosVida(puntosVidaE);
         this.estaVivo = (puntosVidaE > 0);
+        this.debilidad = debilidadE;
+        this.resistencia = resistenciaE;
     }
 
     //Métodos
     public abstract void atacar();
 
-    public abstract void recibirDano(int valorDanio);
+    public abstract void recibirDano(int valorDanio, TipoDanio tipoDanioE);
 
     //GETTERS y SETTERS
     public String getNombre() {
@@ -35,6 +39,14 @@ public abstract class Personaje {
 
     public boolean getEstaVivo() {
         return estaVivo;
+    }
+
+    public TipoDanio getDebilidad() {
+        return debilidad;
+    }
+
+    public TipoDanio getResistencia() {
+        return resistencia;
     }
 
     public void setPuntosVida(int puntosVidaP) {
@@ -69,5 +81,19 @@ public abstract class Personaje {
                 System.out.println(nombre + " ha muerto!");
             }
         }
+    }
+
+    public double calcularDanio(TipoDanio tipoDanioE) {
+        if (tipoDanioE == debilidad) {
+            System.out.println("¡Es muy efectivo! (" + tipoDanioE + " es debilidad)");
+            // 50% más de daño
+            return 1.5;
+        } else if (tipoDanioE == resistencia) {
+            System.out.println("No es muy efectivo... (" + tipoDanioE + " es resistencia)");
+            // 50% menos de daño
+            return 0.5;
+        }
+        // Daño normal
+        return 1.0;
     }
 }
