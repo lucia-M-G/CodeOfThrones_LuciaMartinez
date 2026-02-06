@@ -12,7 +12,7 @@ public class Mago extends Personaje {
         this.escudoMagico = 3;
     }
 
-    // Métodos
+    //Métodos
     @Override
     public void atacar() {
         if (getEstaVivo()) {
@@ -31,7 +31,7 @@ public class Mago extends Personaje {
     public void recibirDano(int valorDanio) {
         if (!getEstaVivo()) return;
 
-        // El mago tiene escudo mágico
+        //El mago tiene escudo mágico
         int danioFinal = valorDanio - escudoMagico;
         if (danioFinal < 0) danioFinal = 0;
 
@@ -42,7 +42,7 @@ public class Mago extends Personaje {
         aplicarDanioDirecto(danioFinal);
     }
 
-    // GETTERS y SETTERS
+    //GETTERS y SETTERS
     public int getMana() {
         return mana;
     }

@@ -48,7 +48,7 @@ public abstract class Personaje {
     }
 
     public void setNivel(int nivelParametro) {
-        // Solo +1
+        //Solo +1
         if (nivelParametro > this.nivel) {
             if (nivelParametro == this.nivel + 1) {
                 this.nivel = nivelParametro;

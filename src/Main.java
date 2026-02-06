@@ -18,7 +18,7 @@ public class Main {
         System.out.println("\n--- ESTADO INICIAL ---");
         mostrarEstadol(listaPers);
 
-        // Ronda 1
+        //Ronda 1
         System.out.println("\n=== RONDA DE COMBATE ===");
         System.out.println("Cada entidad ataca una vez:");
 
@@ -28,7 +28,7 @@ public class Main {
             personajeE.atacar();
         }
 
-        // Ronda 2
+        //Ronda 2
         System.out.println("\n=== SEGUNDA RONDA (Recibir Daño) ===");
 
         for (int i = 0; i < 3 && i < listaPers.size(); i++) {
@@ -41,7 +41,7 @@ public class Main {
         System.out.println("\n--- ESTADO DESPUÉS DEL COMBATE ---");
         mostrarEstadol(listaPers);
 
-        // Test "hacker"
+        //Test "hacker"
         System.out.println("\nIntentando hackear el sistema...");
         intentarHackear(listaPers.get(0));
 
@@ -84,7 +84,7 @@ public class Main {
         System.out.println("   Nivel actual: " + personajeE.getNivel() +
                 " | No se puede bajar el nivel.");
 
-        // ARREGLAR, DE MOMENTO SE PUEDE HACKEAR
+        //ARREGLAR, DE MOMENTO SE PUEDE HACKEAR
         System.out.println("5. Revivir.");
         personajeE.setPuntosVida(50);
         System.out.println("   Vida actual: " + personajeE.getPuntosVida() +
