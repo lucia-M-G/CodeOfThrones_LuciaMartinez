@@ -30,7 +30,7 @@ public class Monstruo extends Personaje {
         int danioFinal = valorDanio;
 
         System.out.println(getNombre() + " recibe " + valorDanio + " de daño.");
-
+        System.out.println("Daño final: " + danioFinal + ".");
         aplicarDanioDirecto(danioFinal);
 
         // Daño aumenta la furia
